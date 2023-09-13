@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hngx_cv_editor/screens/cv_view_page.dart';
 
 class EditResume extends StatefulWidget {
   const EditResume({super.key});
@@ -67,7 +68,6 @@ class _EditResumeState extends State<EditResume> {
                   ),
                   child: TextField(
                     controller: _bioController,
-
                     minLines: 1,
                     maxLines: 1000,
                     decoration: const InputDecoration(
@@ -80,6 +80,19 @@ class _EditResumeState extends State<EditResume> {
                   height: 20,
                 ),
                 GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (builder) => ViewPage(
+                            name: _firstNameController.text,
+                            // surname: _surnameController.text,
+                            // slackUsername: _slackUserNameController.text,
+                            // githubLink: _githubLinkController.text,
+                            // bio: _bioController.text,
+                        ),
+                      ),
+                    );
+                  },
                   child: Container(
                     margin: const EdgeInsets.symmetric(horizontal: 92),
                     height: 48,

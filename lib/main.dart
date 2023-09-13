@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hngx_cv_editor/screens/cv_view_page.dart';
-import 'package:hngx_cv_editor/screens/editing_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: EditResume()
+      home: ViewPage()
     );
   }
 }
